@@ -2,6 +2,9 @@
 
 Console.WriteLine("Olá, bem-vindo(a) ao Projeto Pizzaria :)\n");
 
+Console.WriteLine("PRESSIONE QUALQUER TECLA PARA CONTINUAR");
+Console.ReadKey();
+
 int opcao;
 
 static void Menu()

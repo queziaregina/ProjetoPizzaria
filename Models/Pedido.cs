@@ -54,6 +54,9 @@ namespace ProjetoPizzaria.Models
             Console.WriteLine("PEDIDO CRIADO COM SUCESSO");
             Console.WriteLine($"Total: R$ {totalPedido:F2}");
             ListaDePedidos.Add(Pedido);
+            
+            Console.WriteLine("PRESSIONE QUALQUER TECLA PARA SAIR.");
+            Console.ReadKey();
             }
 
             public static void ListarPedidos()
@@ -169,12 +172,14 @@ namespace ProjetoPizzaria.Models
                 return;
             }
 
-            Console.WriteLine("Pagamento realizado com sucesso!!!");
-
-            if (valorPagoTotal > pedidoSelecionado.Total && formasPagamento.Contains("Dinheiro"))
+            else if (valorPagoTotal > pedidoSelecionado.Total && formasPagamento.Contains("Dinheiro"))
             {
                 Console.WriteLine($"Troco a ser devolvido: R$ {valorPagoTotal - pedidoSelecionado.Total:F2}");
             }
+
+
+            Console.WriteLine("Pagamento realizado com sucesso!!!");
+            Console.ReadKey();
 
             pedidoSelecionado.Pago = true;
         }

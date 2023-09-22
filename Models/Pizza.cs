@@ -21,6 +21,7 @@ namespace ProjetoPizzaria.Models
 
             Console.WriteLine("PIZZA CRIADA COM SUCESSO!!!");
             ListaDePizzas.Add(novaPizza);
+            Console.ReadKey();
         }
 
         public static void ListarPizza()
@@ -34,6 +35,7 @@ namespace ProjetoPizzaria.Models
                         Console.WriteLine($"PREÇO: R$ {pizza.Preco:F2}\n");
                 }
 
+                Console.WriteLine("PRESSIONE QUALQUER TECLA PARA SAIR.");
                 Console.ReadKey();
         }
     }
