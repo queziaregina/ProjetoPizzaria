@@ -21,6 +21,8 @@ namespace ProjetoPizzaria.Models
 
             Console.WriteLine("PIZZA CRIADA COM SUCESSO!!!");
             ListaDePizzas.Add(novaPizza);
+
+            Console.WriteLine("PRESSIONE QUALQUER TECLA PARA SAIR.");
             Console.ReadKey();
         }
 

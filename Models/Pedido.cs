@@ -54,7 +54,7 @@ namespace ProjetoPizzaria.Models
             Console.WriteLine("PEDIDO CRIADO COM SUCESSO");
             Console.WriteLine($"Total: R$ {totalPedido:F2}");
             ListaDePedidos.Add(Pedido);
-            
+
             Console.WriteLine("PRESSIONE QUALQUER TECLA PARA SAIR.");
             Console.ReadKey();
             }
@@ -162,8 +162,15 @@ namespace ProjetoPizzaria.Models
                     }
 
                     Console.WriteLine("Deseja adicionar outra forma de pagamento? (1 - Sim | 2 - Não)");
-                    if (int.TryParse(Console.ReadLine(), out int resposta) && resposta == 2)
-                    break;
+                    if (int.TryParse(Console.ReadLine(), out int resposta) && resposta == 1)
+                    {
+                        Console.WriteLine("Escolha umas das opções");
+                        Console.WriteLine("1. Dinheiro");
+                        Console.WriteLine("2. Cartão de Débito");
+                        Console.WriteLine("3. Vale-Refeição");
+
+                        Console.ReadKey();
+                    }
             }
 
             if (valorPagoTotal < pedidoSelecionado.Total)
